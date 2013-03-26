@@ -17,7 +17,6 @@
 
 import sbt._
 import Keys._
-import java.io.File
 
 import scala.xml.{Node, Elem}
 import scala.xml.transform.{RewriteRule, RuleTransformer}
@@ -28,8 +27,8 @@ object KafkaBuild extends Build {
     organization := "org.apache",
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-g:none"),
     crossScalaVersions := Seq("2.8.0","2.8.2", "2.9.1", "2.9.2"),
-    scalaVersion := "2.8.0",
-    javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.5"),
+    scalaVersion := "2.9.2",
+    javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.7"),
     parallelExecution in Test := false, // Prevent tests from overrunning each other
     libraryDependencies ++= Seq(
       "log4j"                 % "log4j"        % "1.2.15",
