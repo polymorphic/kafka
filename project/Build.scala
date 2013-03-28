@@ -25,10 +25,10 @@ object KafkaBuild extends Build {
   val commonSettings = Seq(
     version := "0.8-SNAPSHOT",
     organization := "org.apache",
-    scalacOptions ++= Seq("-deprecation", "-unchecked"),
+    scalacOptions ++= Seq("-deprecation", "-unchecked", "-g:none"),
     crossScalaVersions := Seq("2.8.0","2.8.2", "2.9.1", "2.9.2"),
-    scalaVersion := "2.9.2",
-    javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.7"),
+    scalaVersion := "2.8.0",
+    javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.5"),
     parallelExecution in Test := false, // Prevent tests from overrunning each other
     libraryDependencies ++= Seq(
       "log4j"                 % "log4j"        % "1.2.15",

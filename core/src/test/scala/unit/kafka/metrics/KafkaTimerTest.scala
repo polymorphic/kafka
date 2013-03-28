@@ -36,8 +36,8 @@ class KafkaTimerTest extends JUnit3Suite {
       clock.addMillis(1000)
     }
     assertEquals(1, metric.count())
-    assertTrue((metric.max() - 1000).abs <= Double.MinPositiveValue)
-    assertTrue((metric.min() - 1000).abs <= Double.MinPositiveValue)
+    assertTrue((metric.max() - 1000).abs <= Double.Epsilon)
+    assertTrue((metric.min() - 1000).abs <= Double.Epsilon)
   }
 
   private class ManualClock extends Clock {
