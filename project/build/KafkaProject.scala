@@ -74,7 +74,7 @@ class KafkaProject(info: ProjectInfo) extends ParentProject(info) with IdeaProje
       <dependency>
         <groupId>com.yammer.metrics</groupId>
         <artifactId>metrics-core</artifactId>
-        <version>3.0.0-c0c8be71</version>
+        <version>2.2.0</version>
         <scope>compile</scope>
       </dependency>
 
@@ -82,7 +82,7 @@ class KafkaProject(info: ProjectInfo) extends ParentProject(info) with IdeaProje
       <dependency>
         <groupId>com.yammer.metrics</groupId>
         <artifactId>metrics-annotation</artifactId>
-        <version>3.0.0-c0c8be71</version>
+        <version>2.2.0</version>
         <scope>compile</scope>
       </dependency>
 

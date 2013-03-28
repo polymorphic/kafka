@@ -25,7 +25,7 @@ object KafkaBuild extends Build {
   val commonSettings = Seq(
     version := "0.8-SNAPSHOT",
     organization := "org.apache",
-    scalacOptions ++= Seq("-deprecation", "-unchecked", "-g:none"),
+    scalacOptions ++= Seq("-deprecation", "-unchecked"),
     crossScalaVersions := Seq("2.8.0","2.8.2", "2.9.1", "2.9.2"),
     scalaVersion := "2.9.2",
     javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.7"),
@@ -34,7 +34,9 @@ object KafkaBuild extends Build {
       "log4j"                 % "log4j"        % "1.2.15",
       "net.sf.jopt-simple"    % "jopt-simple"  % "3.2",
       "org.slf4j"             % "slf4j-simple" % "1.6.4",
-      "com.101tec"            % "zkclient"     % "0.2"
+      "com.101tec"            % "zkclient"     % "0.2",
+      "com.yammer.metrics" % "metrics-core" % "2.2.0",
+      "com.yammer.metrics" % "metrics-annotation" % "2.2.0"
     ),
     // The issue is going from log4j 1.2.14 to 1.2.15, the developers added some features which required
     // some dependencies on various sun and javax packages.

@@ -653,7 +653,7 @@ private[kafka] class ZookeeperConsumerConnector(val config: ConsumerConfig,
       newGauge(
         config.clientId + "-" + config.groupId + "-" + topicThreadId._1 + "-" + topicThreadId._2 + "-FetchQueueSize",
         new Gauge[Int] {
-          def getValue = q.size
+          def value = q.size
         }
       )
     })

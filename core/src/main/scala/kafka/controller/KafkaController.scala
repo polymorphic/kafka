@@ -95,7 +95,7 @@ class KafkaController(val config : KafkaConfig, zkClient: ZkClient) extends Logg
   newGauge(
     "ActiveControllerCount",
     new Gauge[Int] {
-      def getValue() = if (isActive) 1 else 0
+      def value() = if (isActive) 1 else 0
     }
   )
 

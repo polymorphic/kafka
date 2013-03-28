@@ -56,19 +56,19 @@ class ReplicaManager(val config: KafkaConfig,
   newGauge(
     "LeaderCount",
     new Gauge[Int] {
-      def getValue = leaderPartitions.size
+      def value = leaderPartitions.size
     }
   )
   newGauge(
     "PartitionCount",
     new Gauge[Int] {
-      def getValue = allPartitions.size
+      def value = allPartitions.size
     }
   )
   newGauge(
     "UnderReplicatedPartitions",
     new Gauge[Int] {
-      def getValue = {
+      def value = {
         leaderPartitionsLock synchronized {
           leaderPartitions.count(_.isUnderReplicated)
         }
